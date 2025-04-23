@@ -30,6 +30,11 @@ public class AccountService {
 
         accountRepository.save(account);
     }
+
+    // 이메일 중복 확인
+    public boolean isEmailAvailable(String email) {
+        return !accountRepository.existsByEmail(email);
+    }
     
     // 랜덤 닉네임 생성
     private String generateNickname() {
