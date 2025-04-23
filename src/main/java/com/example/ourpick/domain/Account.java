@@ -15,14 +15,11 @@ import lombok.*;
 public class Account {
 
     @Id
-    @Column(length = 16, nullable = false)
-    private String id;
-
-    @Column(length = 50, nullable = false)
-    private String name;
-
     @Column(length = 254, nullable = false)
     private String email;
+
+    @Column(length = 20, nullable = false, unique = true)
+    private String name;
 
     @Setter
     @Column(length = 200, nullable = false)

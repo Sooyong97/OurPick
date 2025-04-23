@@ -9,16 +9,14 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class AccountDto {
-    private String id;
-    private String name;
     private String email;
+    private String name;
     private String password;
     private boolean isAdmin;
 
     public AccountDto(Account account) {
-        this.id = account.getId();
-        this.name = account.getName();
         this.email = account.getEmail();
+        this.name = account.getName();
         this.password = account.getPassword();
         this.isAdmin = account.isAdmin();
     }
