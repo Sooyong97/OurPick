@@ -10,14 +10,14 @@ import lombok.*;
 @Builder
 public class AccountDto {
     private String email;
-    private String name;
+    //private String name;
     private String password;
-    private boolean isAdmin;
+    //private boolean isAdmin;
 
     public AccountDto(Account account) {
         this.email = account.getEmail();
-        this.name = account.getName();
+        //this.name = account.getName();
         this.password = account.getPassword();
-        this.isAdmin = account.isAdmin();
+        //this.isAdmin = account.isAdmin();
     }
 }
