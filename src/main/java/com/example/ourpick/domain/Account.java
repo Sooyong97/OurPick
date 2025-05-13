@@ -15,7 +15,7 @@ import lombok.*;
 public class Account {
 
     @Id
-    @Column(length = 254, nullable = false)
+    @Column(length = 254, nullable = false, unique = true)
     private String email;
 
     @Column(length = 20, nullable = false, unique = true)
