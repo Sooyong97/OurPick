@@ -26,6 +26,7 @@ public class AccountService {
                 .email(dto.getEmail())
                 .name(nickname)
                 .password(bCryptPasswordEncoder.encode(dto.getPassword()))
+                .isAdmin(false)
                 .build();
 
         accountRepository.save(account);
